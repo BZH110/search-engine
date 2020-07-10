@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        function register(){
+            $.getJSON(
+                "json",
+                {"name":"zs","age":"18"},
+                function(data){
+                    var students = data.students;
+                    alert(students);
+                    $.each(students,function (i,item){
+                        alert(item.name + "---" + item.age);
+                    });
+                }
+            )
+        }
+    </script>
+</head>
+<body>
+<button onclick="register()">anwo</button>
+</body>
+</html>
